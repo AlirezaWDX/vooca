@@ -1,0 +1,476 @@
+/*
+
+	ilex grid system framework written by : A.R.Sadeqi
+	Version 1.1 - Release : 2019 September 8th
+
+    How to find the codes using these names?
+        Follow the names of elements like :
+
+        layout - row
+
+        or
+
+        spacing - padding - top
+
+	#===================================================================#
+	#                                                                   #
+	#                            Access menu                            #
+	#                                                                   #
+	#===================================================================#
+	# NAME                   # DESCRIPTION                              #
+	# ---------------------- # ---------------------------------------- #
+	#                        #                                          #
+	# --- fonts              # font face or import method               #
+	#  1. import             #                                          #
+	#  2. font face          #                                          #
+	#                        #                                          #
+	# --- general            # body and basic tags                      #
+	#  1. html               #                                          #
+	#  2. body               #                                          #
+	#  3. direction          #                                          #
+	#                        #                                          #
+	# --- layout             # container, row, col, etc                 #
+	#  1. container          #                                          #
+	#  2. row                #                                          #
+	#  3. col                #                                          #
+	#  4. height             # * based on percentage *                  #
+	#                        #                                          #
+	# --- spacing            # padding, padding top, etc                #
+	#  1. padding            #                                          #
+	#    A. all              #                                          #
+	#    B. vertical         #                                          #
+	#    C. horizontal       #                                          #
+	#    D. top              #                                          #
+	#    E. bottom           #                                          #
+	#    F. left             #                                          #
+	#    G. right            #                                          #
+	#  2. margin             #                                          #
+	#    A. all              #                                          #
+	#    B. vertical         #                                          #
+	#    C. horizontal       #                                          #
+	#    D. top              #                                          #
+	#    E. bottom           #                                          #
+	#    F. left             #                                          #
+	#    G. right            #                                          #
+	#  3. height             # * based on screen reselution *           #
+	#                        #                                          #
+	# --- colorize           # background, text color, etc              #
+	#  1. background color   #                                          #
+	#  2. text color         #                                          #
+	#                        #                                          #
+	# --- text style         # font, font weight, indent, etc.          #
+	#  1. size               #                                          #
+	#  2. weight             #                                          #
+	#  3. align              #                                          #
+	#  4. decoration         #                                          #
+	#  5. transform          #                                          #
+	#                        #                                          #
+	# --- style elements     #                                          #
+	#  1. position           #                                          #
+	#                        #                                          #
+	#========================#==========================================#
+
+*/
+
+/* fonts ----------------------------------------------------- */
+
+/* fonts - import */
+/*@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:400,600,700,800&display=swap');*/
+
+/* general --------------------------------------------------- */
+
+/* general - body */
+html {
+	scroll-behavior: smooth;
+	direction: ltr;
+	text-align: left;
+}
+
+body {
+	font-family: sans-serif;
+	font-size: 16px;
+	color: hsla(0,0%,0%,1.00);
+	background-color: hsla(0,0%,100%,1.00);
+	margin: 0;
+	padding: 0;
+	line-height: 1.7em;
+	font-weight: 400; /* Font weight is normal */
+}
+
+/* general - direction */
+.d-ltr { direction: ltr; }
+.d-rtl { direction: rtl; }
+
+/* layout ---------------------------------------------------- */
+
+/* layout - container */
+.container-fluid, .container-960, .container-1140 {
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 0;
+}
+.container-fluid { width: 100%; }
+.container-960 { width: 960px; }
+.container-1140 { width: 1140px; }
+
+/* layout - row */
+.row {}
+.row::after {
+	content: "";
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	margin: 0;
+	padding: 0;
+	height: 0;
+}
+
+/* layout - col */
+[class*="col-"] > .row > [class*="col-1"]:first-child { padding-left: 0; }
+[class*="col-"] > .row > [class*="col-1"]:last-child { padding-right: 0; }
+
+[class*="col-"] > video,
+[class*="col-"] > audio,
+[class*="col-"] > img { width: 100%; }
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+	float: left;
+	padding: 0;
+	box-sizing: border-box;
+    word-wrap: break-word;
+}
+.col-1 {
+    width: 8.333333%;
+}
+.col-2 {
+    width: 16.666666%;
+}
+.col-3 {
+    width: 25%;
+}
+.col-4 {
+    width: 33.333333%;
+}
+.col-5 {
+    width: 41.666666%;
+}
+.col-6 {
+    width: 50%;
+}
+.col-7 {
+    width: 58.333333%;
+}
+.col-8 {
+    width: 66.666666%;
+}
+.col-9 {
+    width: 75%;
+}
+.col-10 {
+    width: 83.333333%;
+}
+.col-11 {
+    width: 91.666666%;
+}
+.col-12 {
+    width: 100%;
+}
+
+/* layout - height */
+.lh-0 { height: 0; }
+.lh-1 { height: 25%; }
+.lh-2 { height: 50%; }
+.lh-3 { height: 75%; }
+.lh-4 { height: 100%; }
+
+/* spacing --------------------------------------------------- */
+
+/* spacing - padding */
+/* spacing - padding - all */
+.pa-0 { padding: 0; }
+.pa-1 { padding: 15px; }
+.pa-2 { padding: 30px; }
+.pa-3 { padding: 45px; }
+.pa-4 { padding: 60px; }
+.pa-5 { padding: 75px; }
+
+/* spacing - padding - vertical */
+.pv-0 { padding-top: 0; padding-bottom: 0; }
+.pv-1 { padding-top: 15px; padding-bottom: 15px; }
+.pv-2 { padding-top: 30px; padding-bottom: 30px; }
+.pv-3 { padding-top: 45px; padding-bottom: 45px; }
+.pv-4 { padding-top: 60px; padding-bottom: 60px; }
+.pv-5 { padding-top: 75px; padding-bottom: 75px; }
+.pv-6 { padding-top: 90px; padding-bottom: 90px; }
+.pv-7 { padding-top: 105px; padding-bottom: 105px; }
+.pv-8 { padding-top: 120px; padding-bottom: 120px; }
+.pv-9 { padding-top: 135px; padding-bottom: 135px; }
+.pv-10 { padding-top: 150px; padding-bottom: 150px; }
+
+/* spacing - padding - horizontal */
+.ph-0 { padding-left: 0; padding-right: 0; }
+.ph-1 { padding-left: 15px; padding-right: 15px; }
+.ph-2 { padding-left: 30px; padding-right: 30px; }
+.ph-3 { padding-left: 45px; padding-right: 45px; }
+.ph-4 { padding-left: 60px; padding-right: 60px; }
+.ph-5 { padding-left: 75px; padding-right: 75px; }
+
+/* spacing - padding - top */
+.pt-0 { padding-top: 0; }
+.pt-1 { padding-top: 15px; }
+.pt-2 { padding-top: 30px; }
+.pt-3 { padding-top: 45px; }
+.pt-4 { padding-top: 60px; }
+.pt-5 { padding-top: 75px; }
+
+/* spacing - padding - bottom */
+.pb-0 { padding-bottom: 0; }
+.pb-1 { padding-bottom: 15px; }
+.pb-2 { padding-bottom: 30px; }
+.pb-3 { padding-bottom: 45px; }
+.pb-4 { padding-bottom: 60px; }
+.pb-5 { padding-bottom: 75px; }
+
+/* spacing - padding - left */
+.pl-0 { padding-left: 0; }
+.pl-1 { padding-left: 15px; }
+.pl-2 { padding-left: 30px; }
+.pl-3 { padding-left: 45px; }
+.pl-4 { padding-left: 60px; }
+.pl-5 { padding-left: 75px; }
+
+/* spacing - padding - right */
+.pr-0 { padding-right: 0; }
+.pr-1 { padding-right: 15px; }
+.pr-2 { padding-right: 30px; }
+.pr-3 { padding-right: 45px; }
+.pr-4 { padding-right: 60px; }
+.pr-5 { padding-right: 75px; }
+
+/* spacing - margin */
+/* spacing - margin - all */
+.ma-0 { margin: 0; }
+.ma-1 { margin: 15px; }
+.ma-2 { margin: 30px; }
+.ma-3 { margin: 45px; }
+.ma-4 { margin: 60px; }
+.ma-5 { margin: 75px; }
+
+/* spacing - margin - vertical */
+.mv-0 { margin-top: 0; margin-bottom: 0; }
+.mv-1 { margin-top: 15px; margin-bottom: 15px; }
+.mv-2 { margin-top: 30px; margin-bottom: 30px; }
+.mv-3 { margin-top: 45px; margin-bottom: 45px; }
+.mv-4 { margin-top: 60px; margin-bottom: 60px; }
+.mv-5 { margin-top: 75px; margin-bottom: 75px; }
+.mv-6 { margin-top: 90px; margin-bottom: 90px; }
+.mv-7 { margin-top: 105px; margin-bottom: 105px; }
+.mv-8 { margin-top: 120px; margin-bottom: 120px; }
+
+/* spacing - margin - horizontal */
+.mh-0 { margin-left: 0; margin-right: 0; }
+.mh-1 { margin-left: 15px; margin-right: 15px; }
+.mh-2 { margin-left: 30px; margin-right: 30px; }
+.mh-3 { margin-left: 45px; margin-right: 45px; }
+.mh-4 { margin-left: 60px; margin-right: 60px; }
+.mh-5 { margin-left: 75px; margin-right: 75px; }
+
+/* spacing - margin - top */
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: 15px; }
+.mt-2 { margin-top: 30px; }
+.mt-3 { margin-top: 45px; }
+.mt-4 { margin-top: 60px; }
+.mt-5 { margin-top: 75px; }
+
+/* spacing - margin - bottom */
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: 15px; }
+.mb-2 { margin-bottom: 30px; }
+.mb-3 { margin-bottom: 45px; }
+.mb-4 { margin-bottom: 60px; }
+.mb-5 { margin-bottom: 75px; }
+
+/* spacing - margin - left */
+.ml-0 { margin-left: 0; }
+.ml-1 { margin-left: 15px; }
+.ml-2 { margin-left: 30px; }
+.ml-3 { margin-left: 45px; }
+.ml-4 { margin-left: 60px; }
+.ml-5 { margin-left: 75px; }
+
+/* spacing - margin - right */
+.mr-0 { margin-right: 0; }
+.mr-1 { margin-right: 15px; }
+.mr-2 { margin-right: 30px; }
+.mr-3 { margin-right: 45px; }
+.mr-4 { margin-right: 60px; }
+.mr-5 { margin-right: 75px; }
+
+/* spacing - height */
+.h-0 { height: 0; }
+.h-25 { height: 25vh; }
+.h-50 { height: 50vh; }
+.h-75 { height: 75vh; }
+.h-100 { height: 100vh; }
+
+/* colorize -------------------------------------------------- */
+
+/* colorize - background color */
+.bgc-clear {
+	background-color: rgba(255,255,255,1.00);
+	color: rgba(18,18,18,1.00);
+}
+
+.bgc-main {
+	background-color: rgba(0,85,255,1.00);
+	color: rgba(255,255,255,1.00);
+}
+
+.bgc-main-light {
+	background-color: rgba(56,122,255,1.00);
+	color: rgba(255,255,255,1.00);
+}
+
+.bgc-main-lighter {
+	background-color: rgba(137,176,255,1.00);
+	color: rgba(30,30,30,1.00);
+}
+
+.bgc-main-ultralight {
+	background-color: rgba(198,216,255,1.00);
+	color: rgba(30,30,30,1.00);
+}
+
+.bgc-main-dark {
+	background-color: rgba(0,73,219,1.00);
+	color: rgba(255,255,255,1.00);
+}
+
+.bgc-main-darker {
+	background-color: rgba(0,49,147,1.00);
+	color: rgba(255,255,255,1.00);
+}
+
+.bgc-main-ultradark {
+	background-color: rgba(0,30,91,1.00);
+	color: rgba(255,255,255,1.00);
+}
+.bgc-abs-dark {
+	background-color: rgba(33,33,33,1.00);
+	color: rgba(236,236,236,1.00);
+}
+.bgc-abs-darker {
+	background-color: rgba(18,18,18,1.00);
+	color: rgba(236,236,236,1.00);
+}
+
+
+/* colorize - text color */
+.tc-white { color: white; }
+.tc-black { color: black; }
+.tc-grey { color: grey; }
+.tc-silver { color: silver; }
+.tc-cyan { color: cyan; }
+.tc-blue { color: blue; }
+.tc-lightblue { color: lightblue; }
+.tc-royalblue { color: royalblue; }
+
+/* text style ------------------------------------------------ */
+
+/* text style - size */
+.ts-12 { font-size: 12px; }
+.ts-14 { font-size: 14px; }
+.ts-16 { font-size: 16px; }
+.ts-18 { font-size: 18px; }
+.ts-20 { font-size: 20px; }
+.ts-22 { font-size: 22px; }
+.ts-24 { font-size: 24px; }
+.ts-26 { font-size: 26px; }
+.ts-28 { font-size: 28px; }
+.ts-30 { font-size: 30px; }
+.ts-32 { font-size: 32px; }
+.ts-34 { font-size: 34px; }
+.ts-36 { font-size: 36px; }
+.ts-38 { font-size: 38px; }
+.ts-40 { font-size: 40px; }
+.ts-42 { font-size: 42px; }
+
+/* text style - weight */
+.tw-100 { font-weight: 100; }
+.tw-200 { font-weight: 200; }
+.tw-300 { font-weight: 300; }
+.tw-400 { font-weight: 400; }
+.tw-500 { font-weight: 500; }
+.tw-600 { font-weight: 600; }
+.tw-700 { font-weight: 700; }
+.tw-800 { font-weight: 800; }
+.tw-900 { font-weight: 900; }
+
+/* text style - align */
+.ta-center { text-align: center; }
+.ta-left { text-align: left; }
+.ta-right { text-align: right; }
+.ta-justify { text-align: justify; }
+.ta-start { text-align: start; }
+.ta-end { text-align: end; }
+
+/* text style - decoration */
+.td-none { text-decoration: none; }
+.td-overline { text-decoration: overline; }
+.td-underline { text-decoration: underline; }
+
+/* text style - transform */
+.tt-none { text-transform: none; }
+.tt-capitalize { text-transform: capitalize; }
+.tt-uppercase { text-transform: uppercase; }
+.tt-lowercase { text-transform: lowercase; }
+
+
+/* style elements -------------------------------------------- */
+
+/* style elements - position */
+.p-static { position: static; }
+.p-absolute { position: absolute; }
+.p-relative { position: relative; }
+.p-fixed { position: fixed; }
+
+/* style elements - overflow */
+.o-hidden {
+	overflow: hidden;
+}
+.o-visible {
+	overflow: visible;
+}
+
+/* style elements - box sizing */
+.bs-borderbox {
+	box-sizing: border-box;
+}
+.bs-contentbox {
+	box-sizing: content-box;
+}
+
+
+
+
+
+
+
+
+
+
+
+

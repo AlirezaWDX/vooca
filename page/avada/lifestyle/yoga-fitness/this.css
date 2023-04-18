@@ -1,0 +1,80 @@
+.image-bgc-1 {
+	background-image: url(https://avada.theme-fusion.com/lifestyle/wp-content/uploads/sites/25/2015/03/yoga-slider.jpg);
+}
+.image-bgc-2 {
+	background-image: url(https://avada.theme-fusion.com/lifestyle/wp-content/uploads/sites/25/2015/03/yoga5-e1434640052639.jpg);
+}
+
+.image-bgc-1,.image-bgc-2 {
+	background-attachment: fixed;
+	background-size: cover;background-origin: border-box;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.purple-bgc {
+	background-color: rgba(170,134,229,1.00);
+	color: white;
+}
+
+.block-im1 {
+	background-image: url(https://avada.theme-fusion.com/lifestyle/wp-content/uploads/sites/25/2015/03/yoga1.jpg);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+	height: 470px;
+}
+
+.block-im2 {
+    background-image: url(https://avada.theme-fusion.com/lifestyle/wp-content/uploads/sites/25/2015/03/yoga2.jpg);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 470px;
+}
+
+.bgcimage-1 {
+	
+      background-color: rgba(255,255,255,0);
+    background-image: url(https://avada.theme-fusion.com/lifestyle/wp-content/uploads/sites/25/2015/03/yoga4.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding-top: 160px;
+    padding-right: 30px;
+    padding-bottom: 130px;
+    padding-left: 30px;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-color: #eae9e9;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.comments {
+	font-family: 'Acme', 'Open Sans', 'sans-serif';
+	width: 60%;
+	margin: auto;
+	font-style: italic;
+}
+
+.block-im3 {
+	
+      padding: 0px;
+    background-image: url(https://avada.theme-fusion.com/lifestyle/wp-content/uploads/sites/25/2015/03/yoga3.jpg);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 470px;
+}
+
+.mh-470
+{
+	height: 470px;
+	min-height: 470px;
+}

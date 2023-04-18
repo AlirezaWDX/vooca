@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+    
+        <meta charset="UTF-8">
+        <title>Carousel</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+        <style>
+            .gallery-container {
+                width: 800px;
+                height: 400px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .gallery-imgs {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            img {
+                display: none;
+                width: 600px;
+                height: 350px;
+                border-radius: 20px;
+            }
+            .show {
+                display: block;
+            }
+            .gallery-ind {
+                cursor: pointer;
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                background: transparent;
+                border: 3px solid #333;
+                border-radius: 50px;
+            }
+            .gallery-inds {
+                position: absolute;
+                bottom: 0%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .active {
+                background: #333;
+            }
+            .thumb {
+                width: 25%;
+                height: 25%;
+                display: none;
+                position: absolute;
+                box-shadow: 0px 0px 10px #888;
+                bottom: 30px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 999;
+            }
+        </style>
+        <script>
+            function showImage(index) {
+                var imageList = document.getElementsByClassName('gallery');
+                var indicList = document.getElementsByClassName('gallery-ind');
+                for (i = 0; i < imageList.length; i++) {
+                    imageList[i].style.display = 'none';
+                }
+                for (i = 0; i < indicList.length; i++) {
+                    indicList[i].className = 'gallery-ind';
+                }
+                imageList[index-1].style.display = 'block';
+                indicList[index-1].className = 'gallery-ind active';
+            }
+            function showThumb(index) {
+                var imageList = document.getElementsByClassName('thumb');
+                for (i = 0; i < imageList.length; i++) {
+                    imageList[i].style.display = 'none';
+                }
+                imageList[index-1].style.display = 'block';
+            }
+            function hideAllThumbs() {
+                var imageList = document.getElementsByClassName('thumb');
+                for (i = 0; i < imageList.length; i++) {
+                    imageList[i].style.display = 'none';
+                }
+            }
+        </script>
+    
+    </head>
+    
+    <body>
+        
+        <div class="gallery-container">
+        
+            <div class="gallery-imgs">
+                <img src="img/Wallpaper%20(33).jpg" class="gallery show animated bounceIn">
+                <img src="img/Wallpaper%20(33).jpg" class="thumb show">
+                
+                <img src="img/Wallpaper%20(53).jpg" class="gallery animated bounceIn">
+                <img src="img/Wallpaper%20(53).jpg" class="thumb">
+                
+                <img src="img/Wallpaper%20(71).jpg" class="gallery animated bounceIn">
+                <img src="img/Wallpaper%20(71).jpg" class="thumb">
+                
+                <img src="img/Wallpaper%20(23).jpg" class="gallery animated bounceIn">
+                <img src="img/Wallpaper%20(23).jpg" class="thumb">
+                
+                <img src="img/Wallpaper%20(12).jpg" class="gallery animated bounceIn">
+                <img src="img/Wallpaper%20(12).jpg" class="thumb">
+            </div>
+                
+            <div class="gallery-inds">
+                
+                <div class="gallery-ind active" onclick="showImage(1);" onmouseover="showThumb(1);" onmouseout="hideAllThumbs()"></div>
+
+                <div class="gallery-ind" onclick="showImage(2);" onmouseover="showThumb(2);" onmouseout="hideAllThumbs()"></div>
+
+                <div class="gallery-ind" onclick="showImage(3);" onmouseover="showThumb(3);" onmouseout="hideAllThumbs()"></div>
+                
+                <div class="gallery-ind" onclick="showImage(4);" onmouseover="showThumb(4);" onmouseout="hideAllThumbs()"></div>
+                
+                <div class="gallery-ind" onclick="showImage(5);" onmouseover="showThumb(5);" onmouseout="hideAllThumbs()"></div>
+            </div>
+            
+        </div>
+        
+    </body>
+
+</html>

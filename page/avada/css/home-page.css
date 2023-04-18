@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:400,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Acme&display=swap');
+
+/* developed classes of ilex - start */
+.p-fixed { width: 25%; z-index: 99; min-width: 250px; min-height: 800px; bottom: 0; }
+/* developed classes of ilex - end */
+
+
+/* post block */
+
+.post-block {
+	background-color: rgba(255,255,255,1.00);
+	border: 1px solid rgba(221,221,221,1.00);
+}
+.image-cont {
+	position: relative;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+.image-cont img {
+	margin: 0;
+	padding: 0;
+}
+.image-cont .hovblock {
+	opacity: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 97%;
+	position: absolute;
+	top: 0;
+	left: -100%;
+	background-color: rgba(225,107,103,0.88);
+	transition: all 400ms;
+}
+.image-cont:hover .hovblock {
+	left: 0;
+	opacity: 1;
+}
+.hovblock .zoom-cont {
+	position: absolute;
+	display: block;
+	top: 50%;
+	left: 50%;
+	transform-origin: center;
+	transform: translate(-50%, -50%);
+}
+.zoom-cont .icon {
+	display: inline-block;
+	position: relative;
+	width: 50px;
+	height: 50px;
+	font-size: 18px;
+	margin-right: 5px;
+	margin-left: 5px;
+	background-color: rgba(253,144,140,0.88);
+	border-radius: 25px;
+	color: #FFF;
+}
+
+ul.social {
+	margin: 0 auto;
+	padding: 0;
+	padding-top: 20px;
+}
+ul.social li {
+	
+	display: inline-block;
+	font-size: 22px;
+	padding: 0;
+	margin: 0 5px;
+	position: relative;
+	background-color: white;
+	border-radius: 50px;
+	width: 45px;
+	height: 45px;
+}
+ul.social a {
+	color: rgba(219,83,85,1.00);
+	text-decoration: none;
+	
+}
+.centerit {
+	margin: 0 auto;
+}
+.centerit-by-p {
+	position: fixed;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.s2 {
+	padding-top: 0!important;
+	margin-bottom: 15px!important;
+}
+.s2 span {
+	top: 52px;
+	bottom: auto;
+}
+.s2 li {
+	background-color: rgba(245,245,245,1.00)!important;
+}
+
+ul.social i {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform-origin: center;
+	transform: translate(-50%, -50%);
+}
+ul.social span {
+	visibility: hidden;
+	position: absolute;
+	bottom: -40px;
+	font-size: 12px;
+	background-color: rgba(51,51,51,1.00);
+	padding: 2px 5px;
+	left: 50%;
+	color: white;
+	transform: translateX(-50%);
+	border-radius: 5px;
+	transition: all;
+}
+
+ul.social li:hover span {
+	visibility: visible;
+}
+
+.icon i {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.icon a {
+	color: white;
+	text-decoration: none;
+}
+
+.post-block img {
+	width: 100%;
+	height: auto;
+}
+.post-block-info {
+	margin: 15px;
+	
+}
+.post-block-info p {
+	padding-top: 15px;
+	font-size: 14px;
+	color: rgba(112,112,112,1.00);
+}
+.post-block-info a {
+	text-decoration: none;
+	color: rgba(53,53,53,1.00);
+	transition: all 200ms;
+}
+.post-block-info a:hover {
+	color: rgba(225,69,72,1.00);
+}
+/* post block */
+
+
+/* button link */
+.button-link {
+	display: inline-block;
+	font-family: 'Acme', 'Open Sans', 'sans-serif';
+	padding: 10px 20px;
+	width: auto;
+	border: 1.5px solid rgba(255,255,255,1.00);
+	border-radius: 3px;
+	color: #fff;
+	background-color: rgba(255,255,255,0.00);
+	transition: all 200ms;
+	box-sizing: border-box;
+}
+.button-link a {
+	color: #fff;
+	text-decoration: none;
+	
+}.button-link:hover {
+	background-color: rgba(255,255,255,0.2);
+}
+
+/* button link */
+
+.rs {
+	display: inline;
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	background-color: rgba(244,243,239,1.00);
+	top: 50%;
+	margin-top: -10px;
+	transform: rotate(45deg);
+	right: -10px;
+}
+
+.hide-it {
+	visibility: hidden;
+}
+
+.backgrond-image-baby {
+	background-image: url("../image/home-page/post/baby-bump-fashion.webp");
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+/* link classes - start */
+.current-link { color: rgba(247,58,61,1.00)!important; }
+
+/* tags - start */
+html, body {
+	height: 100%!important;
+	font-family: 'Open Sans', sans-serif!important;
+	min-width: 960px;
+}
+
+a {
+	text-decoration: none;
+}
+
+input {
+	width: 100%;
+	padding: 15px 20px;
+	border: 1px solid rgba(185,185,185,1.00);
+	box-sizing: border-box;
+	border-radius: 2px;
+}
+
+button {
+	width: 100%;
+	padding: 15px 20px;
+	background-color: rgba(208,75,77,1.00);
+	color: white;
+	border: none;
+	border-radius: 2px;
+	box-sizing: border-box;
+}
+
+h1 {
+	font-size: 72px;
+}
+
+h1, h2, h3, h4, h5, h6 { font-family: 'Open Sans Condensed', sans-serif; }
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0; font-weight: 400; color: rgba(81,81,81,1.00);
+}
+/* tags - end */
+
+
+/* logo - start */
+.logo-image {
+	width: 60%!important;
+	margin: 10px auto;
+}
+/* logo - end */
+
+/* menu - start */
+.menu {
+	display: block;
+	list-style: none;
+}
+.menu a {
+	color: rgba(87,87,87,1.00);
+	display: block;
+	padding: 15px 60px;
+}
+.menu a:hover {
+	color: rgba(247,58,61,1.00);
+}
+
+ul.menu > li { position: relative; }
+ul.menu > li:hover > .rs {
+	visibility: visible;
+}
+/* menu - end */.image-wird {
+	width: 200px!important;
+}
+
+.img-1, .img-2, .img-3, .img-4 {
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: cover;
+	cursor: pointer;
+	transition: transform 800ms;
+}
+.zoom-in-container {
+	overflow: hidden;
+	position: relative;
+}
+.zoom-in-container h3 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 50px 40px;
+	color: white;
+}
+.zoom-in-container a {
+	color: white;
+}
+.image-info-purple {
+	background-color: rgba(169,143,209,0.95);
+}
+.image-info-red {
+	background-color: rgba(223,132,122,0.95);
+}
+.image-info-green {
+	background-color: rgba(66,168,125,0.90);
+}
+.image-info-blue {
+	background-color: rgba(132,184,255,0.90);
+}
+.zoom-in-container:hover > [class*="img-"] {
+	transform: scale(1.1);
+}
+.zoom-in-container .img-1 {
+	background-image: url("../image/home-page/yoga.webp");
+}
+.zoom-in-container .img-2 {
+	background-image: url("../image/home-page/home.jpg");
+}
+.zoom-in-container .img-3 {
+	background-image: url("../image/home-page/health.jpg");
+}
+.zoom-in-container .img-4 {
+	background-image: url("../image/home-page/fashion.webp");
+}
+
+
+.img-5 {
+	background-image: url("../image/home-page/grass-family.webp");
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+/* Colorize */
+.bgc-light-yellow {
+	background-color: rgba(244,243,239,1.00);
+	color: rgba(23,23,23,1.00);
+}
+.white {
+	color: white;
+}

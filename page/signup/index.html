@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Yahoo : Signup</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<form>
+    <div class="login-form-container">
+        <h5 class="bold">Sign up</h5>
+        <h6>Use your current email address</h6>
+        <div class="p-1">
+            <input class="input-login validate" type="text" placeholder="Firstname" onfocusout="validator(this.value, 'nameVal')">
+            <input class="input-login validate" type="text" placeholder="Surname" onfocusout="validator(this.value, 'name2Val')">
+            <p class="pl-4 red hide" id="nameVal">Fill the ( Firstname )</p>
+            <p class="pl-4 red hide" id="name2Val">Fill the ( Surname )</p>
+        </div>
+        <div class="p-1 p-rel">
+            <input class="input-login w-100-p validate" type="text" placeholder="Email" onfocusout="validator(this.value, 'mailVal')">
+            <span class="text-muted f-1 mail">@yahoo.com</span>
+            <p class="pl-4 red hide" id="mailVal">Fill the ( Email )</p>
+            <p class="al pl-4"><a href="#">I want to use my current email address</a></p>
+        </div>
+        <div class="pa-1 p-rel">
+            <input class="input-login w-100-p validate" style="width: 89%" type="password" id="psval" placeholder="Password" onfocusout="validator(this.value, 'passwordVal')">
+            <span class="text-muted f-1 mail2" id="eye" onClick="showPSW()"><i class="far fa-eye"></i></span> </div>
+            <p class="pl-4 red hide" id="passwordVal">Fill the ( Password )</p>
+        <div class="pa-1 pt-2 p-rel">
+            <select class="input-login a validate" type="select" name="shortCountryCode" aria-required="true" role="combobox"
+            aria-multiline="false" aria-labelledby="country-code-lbl-aria" onChange="city(this.value)">
+                <option role="option" data-code="+852" value="HK">Hong Kong &#x202A;(+852)&#x202C;</option>
+                <option role="option" data-code="+36" value="HU" >Hungary &#x202A;(+36)&#x202C;</option>
+                <option role="option" data-code="+354" value="IS" >Iceland &#x202A;(+354)&#x202C;</option>
+                <option role="option" data-code="+91" value="IN" >India &#x202A;(+91)&#x202C;</option>
+                <option role="option" data-code="+62" value="ID" >Indonesia &#x202A;(+62)&#x202C;</option>
+                <option role="option" data-code="+98" value="IR" >Iran &#x202A;(+98)&#x202C;</option>
+                <option role="option" data-code="+964" value="IQ" >Iraq &#x202A;(+964)&#x202C;</option>
+                <option role="option" data-code="+353" value="IE" >Ireland &#x202A;(+353)&#x202C;</option>
+            </select>
+            <input class="input-login pn validate" type="text" placeholder="Phone number" onfocusout="validator(this.value, 'phoneVal')">
+            <p class="pl-4 red hide" id="phoneVal">Fill the ( Phone )</p>
+            
+        </div>
+        <div class="p-1 pt-2 p-rel">
+            <select id="ir" class="input-login hide" style="width: 92%; margin: 0 auto;" type="select" name="cn" aria-required="true" role="combobox"
+            aria-multiline="false" aria-labelledby="country-code-lbl-aria" >
+                <option role="option" value="tehran" >Tehran</option>
+                <option role="option" value="tehran" >Yazd</option>
+                <option role="option" value="tehran" >Fars</option>
+                <option role="option" value="tehran" >Isfahan</option>
+            </select>
+        </div>
+        <div class="pa-1 pt-2 p-rel">
+            <select class="input-login b">
+                <option>Jenuary</option>
+                <option>Fevruary</option>
+                <option>May</option>
+                <option>June</option>
+                <option>July</option>
+                <option>August</option>
+                <option>September</option>
+                <option>October</option>
+                <option>November</option>
+                <option>December</option>
+            </select>
+            <input class="input-login pn2 validate" type="text" placeholder="Day" onfocusout="validator(this.value, 'birthVal')">
+            <input class="input-login pn2 validate" type="text" placeholder="Year" onfocusout="validator(this.value, 'birthVal')">
+            <p class="pl-4 red hide" id="birthVal">Fill the ( Date of birth )</p>
+        </div>
+        <div class="p-1">
+            <input class="input-login w-100-p" style="width: 90%" type="text" placeholder="Gender (Optional)">
+        </div>
+        <div class="pt-3 pl-4 pr-4 pb-0">
+            <p class="center">By clicking "Continue", you agree to the <a href="#">Terms</a> and <a href="#">Privacy Policy</a></p>
+        </div>
+        <div class="p-2">
+            <button class="sub p-2" onClick="valAll()">Continue</button>
+        </div>
+        <div class="pt-3 pl-4 pr-4 pb-0">
+            <p class="center">Already have an account? <a href="#">Sign in</a></p>
+        </div>
+    </div>
+</form>
+<script src="https://kit.fontawesome.com/489cbe7131.js" crossorigin="anonymous"></script> 
+<script>
+            document.getElementById("eye").innerHTML = "<i class=\"far fa-eye\"></i>";
+            function showPSW() {
+                var obj = document.getElementById("psval");
+                var eye = document.getElementById("eye");
+                if (obj.type == 'password') {
+                    obj.type = 'text';
+                    eye.innerHTML = '<i class="far fa-eye-slash"></i>';
+                }
+                else if (obj.type == 'text') {
+                    obj.type = 'password';
+                    eye.innerHTML = '<i class="far fa-eye"></i>';
+                }
+            }
+            function city(th) {
+                if (th == 'IR') {
+                    document.getElementById('ir').style.display = 'block';
+                }
+                else {
+                    document.getElementById('ir').style.display = 'none';
+                }
+            }
+            function validator(v, i) {
+                if (v == "") {
+                    document.getElementById(i).style.display = "block";
+                } else {
+                    document.getElementById(i).style.display = "none";
+                }
+            }
+            function valAll() {
+                var a = document.getElementsByClassName('validate');
+                for (var i = 0; i <= a.length; i++) {
+                    if (a[i].value == '') {
+                        alert('Please fill the form.');
+                        break;
+                    }
+                    else {
+                        continue;
+                    }
+                }
+            }
+        </script>
+</body>
+</html>

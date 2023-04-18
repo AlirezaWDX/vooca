@@ -1,0 +1,331 @@
+/* Font */
+@import url("https://fonts.googleapis.com/css?family=Abel");
+@import url("https://fonts.googleapis.com/css?family=Rubik");
+/* Font */
+
+/* Body */
+body {
+	font-family: Abel, sans-serif;
+	min-width: 320px;
+}
+/* Body */
+.page-2-header, .page-3-header, .page-4-header, .page-5-header, .page-6-header {
+	background-size: cover;
+	position: relative;
+}
+.page-2-header {
+	background-image :url(https://bridge124.qodeinteractive.com/wp-content/uploads/2018/01/about-us-title-image.jpg)!important;
+}
+.page-3-header {
+	background-image :url(https://bridge124.qodeinteractive.com/wp-content/uploads/2018/01/services-title-image.jpg)!important;
+}
+.page-4-header {
+	background-image :url(https://bridge124.qodeinteractive.com/wp-content/uploads/2018/01/products-title-image.jpg)!important;
+}
+.page-5-header {
+	background-image :url(https://bridge124.qodeinteractive.com/wp-content/uploads/2018/01/people-title-image.jpg)!important;
+}
+.page-6-header {
+	background-image :url(https://bridge124.qodeinteractive.com/wp-content/uploads/2018/01/contact-us-title-image.jpg)!important;
+}
+
+.portfolio h3 {
+	display: inline-block;
+	position: relative;
+	left: 0;
+}
+.portfolio h2 {
+	display: inline-block;
+	position: absolute;
+	right: 0;
+}
+
+.background-portfolio {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	background-color: rgba(219,219,219,1.00);
+	height: 5px;
+}
+
+.background-portfolio-orange {
+	padding: 0;
+	margin: 0;
+	margin-top: -5px;
+	background-color: rgba(255,86,30,1.00);
+	height: 5px;
+	width: 92%;
+}
+
+.background-portfolio-pink {
+	padding: 0;
+	margin: 0;
+	margin-top: -5px;
+	background-color: rgba(255,29,99,1.00);
+	height: 5px;
+	width: 88%;
+}
+
+.background-portfolio-green {
+	padding: 0;
+	margin: 0;
+	margin-top: -5px;
+	background-color: rgb(35, 221, 172);
+	height: 5px;
+	width: 95%;
+}
+
+.background-portfolio-blue {
+	padding: 0;
+	margin: 0;
+	margin-top: -5px;
+	background-color: rgba(0,84,255,1.00);
+	height: 5px;
+	width: 50%;
+}
+
+@keyframes to-top {
+	0% {
+		margin-left: 50px;
+	}
+	100% {
+		margin-left: 0;
+	}
+}
+
+/* --- page : home --- */
+img.home-top-logo {
+	width: 80px;
+	height: 80px;
+}
+
+div.home-top-header {
+	background-image: url("https://bridge124.qodeinteractive.com/wp-content/uploads/2018/01/home-slider-image.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+
+input {
+	border: none;
+	outline: none;
+}
+form > input {
+	border-bottom: 1px solid #fff;
+}
+
+.title {line-height: 1em;
+	font-size: 4em;
+	font-family: Rubik;
+	padding: 0 !important;
+	border-left-width: 4px !important;
+    padding-left: 20px !important;
+	margin-left: -25px !important;
+    border-left-color: #076cf0 !important;
+    border-left-style: solid !important;
+}
+.titles {
+/*
+	display: block;
+	width: 4px;
+	height: 45px;
+	color: rgba(56,122,255,1.00);
+	background-color: rgba(56,122,255,1.00);
+	position: absolute;
+	left: -35px;
+	top: 30px;
+	font-size: 1em;
+*/
+}
+.home-top-header h1 {
+	font-size: 5.5em;
+	color: white;
+	line-height: 0.9em;
+	font-family: Rubik;
+	animation: to-top;
+	animation-duration: 900ms;
+	padding: 0;
+	margin: 0;
+}
+.home-top-header h2, .title-ti {
+	font-size: 2em;
+	line-height: 0.9em;
+	font-family: Rubik;
+	animation: to-top;
+	animation-duration: 900ms;
+}
+
+.home-top-menu {
+	height: 110px;
+}
+.home-top-menu ul {
+	float: right;
+	list-style-type: none;
+}
+.home-top-menu ul li {
+	float: left;
+}
+.home-top-menu ul li a {
+	color: rgba(255,255,255,1.00);
+	text-decoration: none;
+	padding: 8px 20px;
+	display: inline-block;
+	transition: all 300ms;
+}
+.home-top-menu ul li a:hover {
+	color: rgba(56,122,255,1.00);
+}
+
+
+
+.footer {
+	height: 140px;
+}
+.footer ul {
+	float: left;
+	list-style-type: none;
+}
+.footer ul li {
+	float: left;
+}
+.footer ul li a {
+	color: rgba(255,255,255,1.00);
+	text-decoration: none;
+	padding: 10px 40px;
+	margin-top: 20px;
+	display: inline-block;
+	transition: all 300ms;
+}
+.footer ul li a:hover {
+	color: rgba(56,122,255,1.00);
+}
+
+a.home-top-active-link {
+	color: rgba(56,122,255,1.00)!important;
+}
+
+/* --- page : home --- */
+.vid {
+	background-image: url("https://bridge124.qodeinteractive.com/wp-content/uploads/2018/01/video-background-image.jpg?id=86");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+.vid img {
+	position: absolute;
+	filter: invert(100%);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+	width: 90px;
+	height: auto;
+}
+.block, .block11 {
+	background-color: rgba(247,247,247,1.00);
+	padding: 25px 30px;
+	border-radius: 10px;
+	position: relative;
+}
+.block {
+	height: 130px;
+}
+.block img {
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	display: block;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.block11 img {
+	text-align: center;
+	width: 80px;
+	height: 80px;
+}
+.shadow-yellow {
+	box-shadow: 0 10px 60px 0px #f4a382;
+}
+.shadow-red {
+	box-shadow: 0 10px 60px 0px #df8cc4;
+}
+.shadow-green {
+	box-shadow: 0 10px 60px 0px #7fe7c6;
+}
+.shadow-blue {
+	box-shadow: 0 10px 60px 0px #4091fb;
+}
+.block1 {
+	opacity: 0.6;
+	transition: all 300ms;
+}
+.block1:hover{
+	opacity: 1;
+	cursor: pointer;
+}
+.button {
+	font-family: Rubik;
+	transition: all 300ms;
+	font-weight: 400;
+	font-size: 14px;
+	border-radius: 50px;
+	padding: 12px 25px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white;
+	background-color: rgba(56,122,255,1.00);
+}
+input.button {
+	border: none;
+	padding: 10px 40px;
+	font-size: 14px;
+}
+input.button:hover {
+	background-color: rgba(255,255,255,1.00);
+	color: rgba(0,84,255,1.00);
+}
+.button:hover {
+	background-color: rgba(30,30,30,1.00);
+}
+
+.cont {
+	position: absolute;
+	left: -60px;
+	top: 0;
+	
+}
+.conta {
+	
+}
+
+#DFG {
+	margin-bottom: -160px;
+}
+
+@media only screen and (max-width: 768px) {
+	.title {
+		font-size: 2em!important;
+	}
+#sup {
+	font-size: 2em;
+}
+.home-top-header h1 {
+	font-size: 2em;
+	color: white;
+	line-height: 0.9em;
+	font-family: Rubik;
+	animation: to-top;
+	animation-duration: 900ms;
+	padding: 0;
+	margin: 0;
+}
+.home-top-header h2 {
+	font-size: 1em;
+	line-height: 0.9em;
+	font-family: Rubik;
+	animation: to-top;
+	animation-duration: 900ms;
+}
+}
